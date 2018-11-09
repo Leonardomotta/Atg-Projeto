@@ -29,6 +29,7 @@ public class Vertice {
 		else {this.sexo = "Masculino";}
 		}
 		
+		
 	}
 	
 	
@@ -73,6 +74,10 @@ public class Vertice {
 		this.nome = nome;
 	}
 	
+	@Override
+	public String toString() {
+		return "\n nome : " + this.nome + "\n id : " + this.id+ "\n sexo : "+ this.getSexo();
+	}
 
 
 }

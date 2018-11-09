@@ -1,6 +1,12 @@
 package gp.gp;
+import org.jgrapht.Graph;
+import org.jgrapht.WeightedGraph;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.DefaultWeightedEdge;
+import org.jgrapht.graph.SimpleGraph;
+import org.jgrapht.graph.SimpleWeightedGraph;
 
-public class Aresta {
+public class Aresta extends DefaultWeightedEdge{
 	
 	private int peso;
 	private Vertice origem;
@@ -8,6 +14,7 @@ public class Aresta {
 	
 	
 	Aresta(Vertice origem,Vertice destino){
+		super();
 		this.peso = 1;
 		this.origem = origem;
 		this.destino = destino;
@@ -50,6 +57,12 @@ public class Aresta {
 	
 	public void setDestino(Vertice destino) {
 		this.destino = destino;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return (this.getOrigem().getNome() +" , "+ this.getDestino().getNome());
 	}
 	
 	

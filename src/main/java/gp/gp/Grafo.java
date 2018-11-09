@@ -1,13 +1,14 @@
 package gp.gp;
 import org.jgrapht.Graph;
 import org.jgrapht.WeightedGraph;
+import org.jgrapht.graph.DefaultDirectedWeightedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleGraph;
 import org.jgrapht.graph.SimpleWeightedGraph;
 
 public class Grafo {
 	
-	 private Graph<Vertice, Aresta> g = new SimpleWeightedGraph(WeightedGraph.class);
+	 private Graph<Vertice,Aresta> g = new DefaultDirectedWeightedGraph(DefaultEdge.class);
 	
 	public void addAresta(Vertice origem , Vertice destino) {
 		
@@ -30,7 +31,9 @@ public class Grafo {
 		else {try {
 		
 			g.addEdge(origem,destino);}
-		 catch(Exception e) {}
+		 catch(Exception e) {
+			 System.out.println(e);
+		 }
 		}
 	}
 	
