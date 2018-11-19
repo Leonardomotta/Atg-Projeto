@@ -3,7 +3,7 @@ package gp.gp;
 import com.google.gson.JsonObject;
 
 import gp.gp.DataProvider;
-public class Vertice {
+public class Vertice  {
 	
 	private String id ;
 	
@@ -76,7 +76,7 @@ public class Vertice {
 	
 	@Override
 	public String toString() {
-		return "\n nome : " + this.nome + "\n id : " + this.id+ "\n sexo : "+ this.getSexo();
+		return this.nome;
 	}
 
 

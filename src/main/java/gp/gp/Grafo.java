@@ -8,7 +8,7 @@ import org.jgrapht.graph.SimpleWeightedGraph;
 
 public class Grafo {
 	
-	 private Graph<Vertice,Aresta> g = new DefaultDirectedWeightedGraph(DefaultEdge.class);
+	 private Graph<Vertice,Aresta> g = new DefaultDirectedWeightedGraph(Aresta.class);
 	
 	public void addAresta(Vertice origem , Vertice destino) {
 		
@@ -32,7 +32,7 @@ public class Grafo {
 		
 			g.addEdge(origem,destino);}
 		 catch(Exception e) {
-			 System.out.println(e);
+			 System.out.println(e.getCause());
 		 }
 		}
 	}

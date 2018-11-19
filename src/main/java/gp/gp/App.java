@@ -30,11 +30,8 @@ public class App
     	y.add("nm1107001");
         a.add(y);
         Graph<Vertice, Aresta> g = gf.GenerateGraph(a);
-        Set<Aresta> o = g.edgeSet();
-        System.out.println(o);
-        
         
         
         
     }
-}
+} 

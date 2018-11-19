@@ -8,17 +8,19 @@ import org.jgrapht.graph.SimpleWeightedGraph;
 
 public class Aresta extends DefaultWeightedEdge{
 	
-	private int peso;
-	private Vertice origem;
-	private Vertice destino;
+	public int peso;
+	public Vertice origem;
+	public Vertice destino;
 	
 	
-	Aresta(Vertice origem,Vertice destino){
+	
+	
+	public Aresta() {
 		super();
 		this.peso = 1;
-		this.origem = origem;
-		this.destino = destino;
 	}
+	
+	
 	
 	@Override
 	public boolean equals(Object obj) {
@@ -62,9 +64,29 @@ public class Aresta extends DefaultWeightedEdge{
 	@Override
 	public String toString() {
 		
-		return (this.getOrigem().getNome() +" , "+ this.getDestino().getNome());
+		return ("("+super.getSource()+","+super.getTarget()+","+this.getWeight()+")");
 	}
 	
+	
+	@Override
+	protected double getWeight() {
+		// TODO Auto-generated method stub
+		return this.peso;
+	}
+	
+	
+	@Override
+	protected Object getSource() {
+		// TODO Auto-generated method stub
+		return super.getSource();
+	}
+	
+
+	@Override
+	protected Object getTarget() {
+		// TODO Auto-generated method stub
+		return super.getTarget();
+	}
 	
 	
 
