@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Set;
 
 import org.jgrapht.Graph;
+import org.jgrapht.UndirectedGraph;
+import org.jgrapht.alg.util.VertexDegreeComparator;
+import org.jgrapht.graph.DefaultDirectedWeightedGraph;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -17,19 +20,22 @@ public class App
 
 {
     public static void main( String[] args )
-    {  
+    {   
+    	CsvReader cs = new CsvReader();
     	
     	graphFactory gf= new graphFactory(); 
-    	ArrayList<ArrayList<String>> a =  new ArrayList<ArrayList<String>>();
-    	ArrayList<String> x = new ArrayList<String>();
-    	x.add("nm4043618");
-    	x.add("nm0719637");
-    	a.add(x);
-    	ArrayList<String> y = new ArrayList<String>();
-    	y.add("nm4043618");
-    	y.add("nm1107001");
-        a.add(y);
-        Graph<Vertice, Aresta> g = gf.GenerateGraph(a);
+    	// gera o grafo a partir do csv
+    	//ArrayList<ArrayList<String>> a =  cs.read("C:/Users/Leonardo/Desktop/resp/src/resources/convertcsvComrep.csv");
+    	
+    	
+        //Graph<Vertice, Aresta> g = gf.GenerateGraph(a);
+        
+        //VertexDegreeComparator<Vertice, Aresta> comp = new  VertexDegreeComparator<Vertice, Aresta>((UndirectedGraph<Vertice, Aresta>) g);        
+       
+        // estão como comentario Pois não conseguimos enviar o csv ao git
+    	
+    
+        
         
         
         

@@ -22,14 +22,20 @@ public class Aresta extends DefaultWeightedEdge{
 	
 	
 	
+	
+	
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Aresta) {
-			Aresta a = (Aresta) obj;
-			if(a.origem.equals(this.origem)&& a.destino.equals(this.destino)) {
+			Aresta a =  (Aresta) obj;
+			Vertice o = (Vertice) a.getSource();
+			Vertice d = (Vertice) a.getTarget();
+			Vertice to =(Vertice) this.getSource();
+			Vertice td =(Vertice) this.getTarget();
+			if(o.equals(to) && d.equals(td)) {
 				return true;
 			}
-			if(a.destino.equals(this.origem)&&a.origem.equals(this.destino)) {
+			if(o.equals(td) && d.equals(to)) {
 				return true;
 			}
 		}
@@ -64,15 +70,11 @@ public class Aresta extends DefaultWeightedEdge{
 	@Override
 	public String toString() {
 		
-		return ("("+super.getSource()+","+super.getTarget()+","+this.getWeight()+")");
+		return ("\n("+super.getSource()+","+super.getTarget()+","+this.getWeight()+")");
 	}
 	
 	
-	@Override
-	protected double getWeight() {
-		// TODO Auto-generated method stub
-		return this.peso;
-	}
+	
 	
 	
 	@Override
@@ -86,6 +88,13 @@ public class Aresta extends DefaultWeightedEdge{
 	protected Object getTarget() {
 		// TODO Auto-generated method stub
 		return super.getTarget();
+	}
+	
+	@Override
+	
+	protected double getWeight() {
+		// TODO Auto-generated method stub
+		return this.peso;
 	}
 	
 	

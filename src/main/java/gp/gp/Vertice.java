@@ -1,11 +1,10 @@
 package gp.gp;
 
 import com.google.gson.JsonObject;
-
-import gp.gp.DataProvider;
-public class Vertice  {
+public class Vertice   {
 	
 	private String id ;
+	
 	
 
 
@@ -35,9 +34,12 @@ public class Vertice  {
 	
 	@Override
 	public boolean equals(Object obj) {
+		
+
 		if(obj instanceof Vertice) {
+			
 			Vertice v = (Vertice) obj;
-			if(this.id.equals(v.id)) {
+			if(this.getId().equals(v.getId())) {
 				return true;
 			}
 		}
